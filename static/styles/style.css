@@ -191,6 +191,7 @@ li:first-child {
 
 #shortcuts-container {
 	display: grid;
+	justify-items: center;
 	grid-row-gap: 1rem;
 	grid-auto-rows: max-content;
 	grid-template-columns: 1fr 1fr;
@@ -231,7 +232,7 @@ li:first-child {
 	margin-top: 0rem;
 	margin-bottom: 2.3rem;
 	grid-column: 1/-1;
-
+	width: 90%;
 	text-align: center;
 }
 

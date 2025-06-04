@@ -17,7 +17,7 @@ def heartbeat():
 
 @app.route('/')
 def index():
-    return render_template('index.jinja', sections=config['shortcuts'])
+    return render_template('index.jinja', sections=config['shortcuts'], greeting=config['greeting'], image=config['image'])
 
 if __name__ == "__main__":
     app.run(debug=os.getenv("FLASK_DEBUG", "False") == "True")

@@ -50,7 +50,12 @@
 	</button>
 
 	<nav id="shortcuts-container">
-		<img src="/images/Eye Bee M Gruvpink.png" style="max-width: 100%; grid-column: 1 / -1;">
+		{% if greeting.image %}
+		<img src="/images/{{ greeting.image }}" style="max-width: 70%; grid-column: 1 / -1;">
+		{% endif %}
+		{% if greeting.text %}
+		<h1 id="title-display">{{ greeting.text }}</h2>
+		{% endif %}
 		<h2 id="date-display"></h2>
 
 		<form id="search-form" method="get" onsubmit="return handleSearch(event)">
@@ -69,7 +74,7 @@
 	<div id="image-container">
 		<div id="image-box">
 			<a href="https://github.com/cfuendev/" id="image-link-box"><img id="image-display" alt="fem"
-					src="/images/img.png"></a>
+					src="/images/{{ image }}"></a>
 		</div>
 		<div id="icons-box" style="display: none;">
 			<a href="https://calendar.google.com/calendar/u/0/r" class="svg-container">

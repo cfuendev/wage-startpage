@@ -1,0 +1,1 @@
+start /MIN C:\Users\JuanAndresCastilloFu\Documents\Personal\wage-startpage\.venv\Scripts\python.exe C:\Users\JuanAndresCastilloFu\Documents\Personal\wage-startpage\app.py
