@@ -3,7 +3,7 @@ function changeColorScheme() {
     document.body.setAttribute("theme", colorscheme.value);
 
     const link = document.getElementById("colorscheme-style");
-    link.href = `static/styles/schemes/${colorscheme.value}.css`
+    link.href = `/styles/schemes/${colorscheme.value}.css`
 
     localStorage.setItem("selectedColorscheme", colorscheme.value);
 }

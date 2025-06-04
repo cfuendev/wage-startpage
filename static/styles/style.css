@@ -320,7 +320,7 @@ li:first-child {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 37rem;
+	height: 100%;;
 }
 
 #image-link-box {
@@ -343,6 +343,19 @@ li:first-child {
 	box-shadow: var(--color-shadow) 0rem 0rem var(--shadow-radius);
 	border-radius: var(--border-radius);
 	border: var(--border-width) solid var(--color-border);
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+ul {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 120px;
 }
 
 @media (max-width: 1250px) {

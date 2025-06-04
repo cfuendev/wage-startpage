@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>~/startpage</title>
+	<link rel="stylesheet" href="/styles/style.css">
+	<link id="colorscheme-style" rel="stylesheet" href="">
+	<link rel="icon" href="/icons/icon.svg" type="image/x-icon" />
+</head>
+
+<body>
+
+	<header id="settings-container">
+
+		<div id="settings-box">
+			<div id="settings-content">
+				<div class="settings-options">
+					<h1>Search Engine</h1>
+					<h1>Colorscheme</h1>
+				</div>
+
+				<div class="settings-options">
+					<select id="search-engine-selector" class="settings-selector" onchange="changeSearchEngine()">
+						<option value="https://search.brave.com/search">Brave</option>
+						<option value="https://www.google.com/search">Google</option>
+						<option value="https://duckduckgo.com/">DuckDuckGo</option>
+					</select>
+
+					<select id="colorscheme-selector" class="settings-selector" onchange="changeColorScheme()">
+						<option value="dracula-dark">Dracula Dark</option>
+						<option value="dracula-light">Dracula Light</option>
+						<option value="edge">Edge</option>
+						<option value="gruvbox">Gruvbox</option>
+					</select>
+				</div>
+			</div>
+
+			<button onclick="hideSettings()" id="settings-hide">
+				<img src="/icons/close.svg" class="svg-icon" alt="Settings Icon">
+			</button>
+
+		</div>
+
+	</header>
+
+	<button onclick="showSettings()" id="settings-display">
+		<img src="/icons/settings.svg" class="svg-icon" alt="Settings Icon">
+	</button>
+
+	<nav id="shortcuts-container">
+		<img src="/images/Eye Bee M Gruvpink.png" style="max-width: 100%; grid-column: 1 / -1;">
+		<h2 id="date-display"></h2>
+
+		<form id="search-form" method="get" onsubmit="return handleSearch(event)">
+			<input type="text" id="search-input" placeholder="Search" name="q" autofocus />
+		</form>
+		{% for section in sections %}
+		<ul>
+			<li>~/{{ section.sectName }}</li>
+			{% for scut in section.shortcuts %}
+			<li><a href="{{ scut.url }}">{{ scut.name }}</a></li>
+			{% endfor %}
+		</ul>
+		{% endfor %}
+	</nav>
+
+	<div id="image-container">
+		<div id="image-box">
+			<a href="https://github.com/cfuendev/" id="image-link-box"><img id="image-display" alt="fem"
+					src="/images/img.png"></a>
+		</div>
+		<div id="icons-box" style="display: none;">
+			<a href="https://calendar.google.com/calendar/u/0/r" class="svg-container">
+				<img src="/icons/calendar.svg" class="svg-icon" alt="Calendar Icon">
+			</a>
+			<a href="https://tasks.google.com/tasks/" class="svg-container">
+				<img src="/icons/tasks.svg" class="svg-icon" alt="Tasks Icon">
+			</a>
+			<a href="https://drive.google.com/drive/my-drive" class="svg-container">
+				<img src="/icons/drive.svg" class="svg-icon" alt="Drive Icon">
+			</a>
+			<a href="https://www.notion.so/" class="svg-container">
+				<img src="/icons/notion.svg" class="svg-icon" alt="Notion Icon">
+			</a>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="/scripts/get_date.js"></script>
+	<script type="text/javascript" src="/scripts/get_search_engine.js"></script>
+	<script type="text/javascript" src="/scripts/set_colorscheme.js"></script>
+
+</body>
+
+</html>
