@@ -1,0 +1,15 @@
+body[theme="sap-dark"] {
+    --color-foreground-1: #e1e2e0;
+    --color-foreground-2: #6f89a5;
+    --color-background-1: #1c2228;
+    --color-background-2: #29313a;
+    --color-border: #445261;
+    --color-shadow: #1d2021;
+    --color-highlight: #5b7893;
+    --color-accent: #5b7893;
+    --color-blur: #D3869B3F;
+
+    --button-inactive: invert(29%) sepia(15%) saturate(238%) hue-rotate(338deg) brightness(96%) contrast(97%);
+    --button-active: invert(78%) sepia(88%) saturate(2096%) hue-rotate(291deg) brightness(92%) contrast(77%);
+}
+
